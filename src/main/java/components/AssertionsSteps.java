@@ -78,49 +78,9 @@ public class AssertionsSteps extends components.ApplicationSteps {
 
     }
 
-    public static interface ICredsPrivateAccounts {
-
-        String inputLogin();
-
-        String inputPassword();
-
-        void inputCreds(WebElement login, WebElement password, WebElement buttonEnter);
 
     }
 
-    public static class InputCredsPrivateAccount extends components.ApplicationSteps implements ICredsPrivateAccounts {
-        public InputCredsPrivateAccount(WebDriver driver) {
-            super(driver);
-        }
-
-        private final String login = System.getProperty("login");
-        private final String password = System.getProperty("password");
-
-        @Override
-        public String inputLogin() {
-            System.getProperty(login);
-            return login;
-        }
-
-        @Override
-        public String inputPassword() {
-            System.getProperty(password);
-            return password;
-        }
-
-
-        public void inputCreds(WebElement login, WebElement password, WebElement buttonEnter) {
-            explicitWait(login);
-            login.clear();
-            login.sendKeys(inputLogin());
-            password.clear();
-            password.sendKeys(inputPassword());
-            buttonEnter.click();
-
-
-        }
-    }
-}
 
 
 
