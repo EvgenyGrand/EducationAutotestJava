@@ -226,7 +226,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure-maven.version}</version>
                 <configuration>
-                    <resultsDirectory>C:\Users\BSPB\IdeaProjects\NewOtusProject\target\allure-results</resultsDirectory>
+                    <resultsDirectory>C:\develop\EducationAutotestJava\target\allure-results</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>
