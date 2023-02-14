@@ -4,8 +4,10 @@ import components.AssertionsSteps;
 import components.credsPrivateAccounts.InputCredsPrivateAccount;
 import data.DriverData;
 import factory.WebDriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import pages.otus.MainPageOtus;
 import pages.otus.OtusPersonalAccountPage;
@@ -15,11 +17,6 @@ public class OtusCheckSignInPersonalAccount_Test {
 
     private WebDriver driver;
 
-    @BeforeAll
-    public static void init() {
-        WebDriverManager.chromedriver().setup();
-
-    }
 
     @BeforeEach
     public void initDriver() throws exception.BrowserNotSupportException {
@@ -30,7 +27,7 @@ public class OtusCheckSignInPersonalAccount_Test {
 
     @Test
     @DisplayName("Проверка регистрации в личном кабинете")
-    public void CheckSigninPersonalAccount() throws InterruptedException{
+    public void CheckSigninPersonalAccount() throws InterruptedException {
         driver.manage().window().maximize();
         MainPageOtus mainPage = new MainPageOtus(driver);
         OtusPrivateAccountPage otusPrivateAccountPage = new OtusPrivateAccountPage(driver);
@@ -45,8 +42,6 @@ public class OtusCheckSignInPersonalAccount_Test {
     }
 
 
-
-
     @AfterEach
     public void close() {
         if (this.driver != null) {
@@ -56,7 +51,6 @@ public class OtusCheckSignInPersonalAccount_Test {
 
 
     }
-
 
 
 }

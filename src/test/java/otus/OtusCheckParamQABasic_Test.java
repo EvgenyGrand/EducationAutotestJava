@@ -3,8 +3,10 @@ package otus;
 import components.AssertionsSteps;
 import data.DriverData;
 import factory.WebDriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import pages.otus.OtusEducationMenu;
 import pages.otus.OtusPageOfTestingCourse;
@@ -14,11 +16,6 @@ public class OtusCheckParamQABasic_Test {
 
     private WebDriver driver;
 
-    @BeforeAll
-    public static void init() {
-        WebDriverManager.chromedriver().setup();
-
-    }
 
     @BeforeEach
     public void initDriver() throws exception.BrowserNotSupportException {
