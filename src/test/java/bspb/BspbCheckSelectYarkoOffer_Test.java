@@ -12,6 +12,7 @@ import pages.bspb.BspbYarkoPage;
 
 public class BspbCheckSelectYarkoOffer_Test {
     private WebDriver driver;
+    private AssertionsSteps assertionsSteps;
 
     @BeforeAll
     public static void init() {

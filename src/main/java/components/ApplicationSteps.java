@@ -49,7 +49,7 @@ public abstract class ApplicationSteps {
 
     public void explicitWait(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, time);
-        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public void click(WebElement element) {

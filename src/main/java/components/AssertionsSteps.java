@@ -78,7 +78,6 @@ public class AssertionsSteps extends components.ApplicationSteps {
 
     }
 
-
     }
 
 
