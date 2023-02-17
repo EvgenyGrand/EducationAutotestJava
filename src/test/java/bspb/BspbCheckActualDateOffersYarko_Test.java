@@ -3,25 +3,16 @@ package bspb;
 import components.AssertionsSteps;
 import data.DriverData;
 import factory.WebDriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import pages.bspb.BspbMainMenu;
 import pages.bspb.BspbYarkoPage;
 
-import java.util.List;
 
-public class BspbCheckActualDateOffersYarko_Test {
+public class BspbCheckActualDateOffersYarko_Test  {
+
 
     private WebDriver driver;
-    private AssertionsSteps assertionsSteps;
-
-    @BeforeAll
-    public static void init() {
-        WebDriverManager.chromedriver().setup();
-
-    }
 
     @BeforeEach
     public void initDriver() throws exception.BrowserNotSupportException {

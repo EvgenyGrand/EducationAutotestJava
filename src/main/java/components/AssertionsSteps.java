@@ -3,6 +3,7 @@ package components;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -74,8 +75,6 @@ public class AssertionsSteps extends components.ApplicationSteps {
                 .allSatisfy(date -> assertThat(date)
                         .as("Проверяем, что дата %s больше текущей даты ", date)
                         .isAfter(LocalDate.now()));
-
-
     }
 
     }
