@@ -1,14 +1,15 @@
 package otus;
 
-import components.AssertionsSteps;
-import data.DriverData;
-import factory.WebDriverFactory;
+import ui.components.AssertionsSteps;
+import ui.data.DriverData;
+import ui.factory.WebDriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.otus.MainPageOtus;
+import ui.exception.BrowserNotSupportException;
+import ui.pages.otus.MainPageOtus;
 
 public class OtusCheckCountSpecializationCourse_Test {
 
@@ -16,7 +17,7 @@ public class OtusCheckCountSpecializationCourse_Test {
 
 
     @BeforeEach
-    public void initDriver() throws exception.BrowserNotSupportException {
+    public void initDriver() throws BrowserNotSupportException {
 
         driver = new WebDriverFactory().getDriver(DriverData.CHROME);
 

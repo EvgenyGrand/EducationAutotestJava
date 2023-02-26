@@ -1,17 +1,18 @@
 package otus;
 
-import components.AssertionsSteps;
-import components.credsPrivateAccounts.InputCredsPrivateAccount;
-import data.DriverData;
-import factory.WebDriverFactory;
+import ui.components.AssertionsSteps;
+import ui.components.credsPrivateAccounts.InputCredsPrivateAccount;
+import ui.data.DriverData;
+import ui.factory.WebDriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.otus.MainPageOtus;
-import pages.otus.OtusPersonalAccountPage;
-import pages.otus.OtusPrivateAccountPage;
+import ui.exception.BrowserNotSupportException;
+import ui.pages.otus.MainPageOtus;
+import ui.pages.otus.OtusPersonalAccountPage;
+import ui.pages.otus.OtusPrivateAccountPage;
 
 public class OtusCheckSignInPersonalAccount_Test {
 
@@ -19,7 +20,7 @@ public class OtusCheckSignInPersonalAccount_Test {
 
 
     @BeforeEach
-    public void initDriver() throws exception.BrowserNotSupportException {
+    public void initDriver() throws BrowserNotSupportException {
 
         driver = new WebDriverFactory().getDriver(DriverData.CHROME);
 

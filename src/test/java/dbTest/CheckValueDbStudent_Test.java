@@ -2,8 +2,8 @@ package dbTest;
 
 
 
-import components.database.JdbcConnect;
-import components.database.tables.AssertionsDB;
+import ui.components.database.JdbcConnect;
+import ui.components.database.tables.AssertionsDB;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
