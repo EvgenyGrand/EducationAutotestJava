@@ -13,7 +13,7 @@ public class OtusQaBasicCoursePage extends AbsBasePages {
     @FindBy(css = "a[href=\"/lessons/qa-engineer\"]")
     public WebElement qaBasicCourse;
 
-    @FindBy(css = "h1.sc-182qdc9-1.gjnars")
+    @FindBy(css = "h1.sc-1og4wiw-0.s2pydo-1")
     public WebElement titleQaBasicCourse;
 
     @FindBy(xpath = "//p[contains(text(),'4 месяца')]")

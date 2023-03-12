@@ -1,4 +1,4 @@
-package otus;
+package ui.otus;
 
 import ui.components.AssertionsSteps;
 import ui.data.DriverData;
@@ -9,12 +9,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import ui.exception.BrowserNotSupportException;
-import ui.pages.otus.MainPageOtus;
+import ui.pages.otus.OtusEducationMenu;
+import ui.pages.otus.OtusPageOfTestingCourse;
 
-public class OtusCheckCountSpecializationCourse_Test {
+public class OtusCheckCountCurse_Test {
+
 
     private WebDriver driver;
-
 
     @BeforeEach
     public void initDriver() throws BrowserNotSupportException {
@@ -24,13 +25,18 @@ public class OtusCheckCountSpecializationCourse_Test {
     }
 
     @Test
-    @DisplayName("Проверка числа курсов со специализацией")
-    public void checkCountSpecializationCourse() throws InterruptedException {
+    @DisplayName("Проверка количества курсов тестирования")
+    public void checkOtusCourses() throws InterruptedException {
         driver.manage().window().maximize();
-        MainPageOtus mainPage = new MainPageOtus(driver);
+        OtusEducationMenu educationMenu = new OtusEducationMenu(driver);
+        OtusPageOfTestingCourse pageOfTestingCourse = new OtusPageOfTestingCourse(driver);
         AssertionsSteps assertionsSteps = new AssertionsSteps(driver);
-        mainPage.openFirstUrl();
-        assertionsSteps.checkCountCardsOfCourseStartWishValue(mainPage.cardsOFCourse, "Специализация", 13);
+        educationMenu.openFirstUrl();
+        educationMenu.navigationDropDownMenu(educationMenu.firstLevelMenu, educationMenu.secondLevelMenu);
+        pageOfTestingCourse.jsClick(pageOfTestingCourse.buttonPagination);
+        assertionsSteps.checkCountCourse(pageOfTestingCourse.cardsOfCurse, 16);
+
+
     }
 
     @AfterEach
@@ -39,5 +45,6 @@ public class OtusCheckCountSpecializationCourse_Test {
             this.driver.close();
             this.driver.quit();
         }
+
     }
 }

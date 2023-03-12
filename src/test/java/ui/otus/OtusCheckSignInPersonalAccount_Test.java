@@ -1,4 +1,4 @@
-package otus;
+package ui.otus;
 
 import ui.components.AssertionsSteps;
 import ui.components.credsPrivateAccounts.InputCredsPrivateAccount;

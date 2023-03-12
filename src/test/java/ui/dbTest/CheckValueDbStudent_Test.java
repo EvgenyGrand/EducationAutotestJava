@@ -1,9 +1,9 @@
-package dbTest;
+package ui.dbTest;
 
 
 
 import ui.components.database.JdbcConnect;
-import ui.components.database.tables.AssertionsDB;
+import ui.components.database.tables.StepsDAO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +19,7 @@ public class CheckValueDbStudent_Test {
     @DisplayName("Проверка значения из таблицы Студенты")
     public void selectRequest() throws SQLException {
         JdbcConnect jdbcConnect = new JdbcConnect();
-        AssertionsDB studentTable = new AssertionsDB();
+        StepsDAO studentTable = new StepsDAO();
         jdbcConnect.jdbcConnect();
         studentTable.CheckFioStudents("select fio from mydbtest.student where id = '1' ");
     }

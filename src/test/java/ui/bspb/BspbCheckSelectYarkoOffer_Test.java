@@ -1,4 +1,4 @@
-package bspb;
+package ui.bspb;
 
 import ui.components.AssertionsSteps;
 import ui.data.DriverData;

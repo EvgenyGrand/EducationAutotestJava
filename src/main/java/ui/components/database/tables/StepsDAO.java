@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class AssertionsDB extends JdbcConnect {
+public class StepsDAO extends JdbcConnect {
 
     public void CheckFioStudents(String SqlRecuest) throws SQLException {
         JdbcConnect jdbcConnect = new JdbcConnect();

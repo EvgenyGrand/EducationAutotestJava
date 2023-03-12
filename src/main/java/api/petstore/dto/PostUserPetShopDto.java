@@ -1,5 +1,5 @@
 
-package api.dto;
+package api.petstore.dto;
 
 import lombok.Builder;
 import lombok.Data;
