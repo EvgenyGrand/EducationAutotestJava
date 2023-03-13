@@ -11,9 +11,9 @@ import static io.restassured.RestAssured.responseSpecification;
 
 @Data
 public class PetShopApi extends BaseParamApi {
-
+    private static int id = 5;
     private static final String USER = "/user";
-    private static  String ORDERID = "/store/order/1";
+    private static  String ORDERID = "/store/order/" + id;
 
 
     public ValidatableResponse createUsers(PostUserPetShopDto postUserPetShopDto) {
@@ -26,7 +26,7 @@ public class PetShopApi extends BaseParamApi {
                 .log().all();
     }
 
-    public ValidatableResponse getOrderId(GetOrderId orderId) {
+    public ValidatableResponse getOrderId(GetOrderId id) {
         return given(spec)
                 .when()
 //                .queryParam("orderId", 5)

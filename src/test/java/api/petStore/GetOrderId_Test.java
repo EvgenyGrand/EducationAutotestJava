@@ -22,7 +22,7 @@ public class GetOrderId_Test {
         userPetShopApi.getOrderId(orderId)
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema/petstore/GetOrderId.json"))
                 .statusCode(200)
-                .body("code", equalTo(1));
+                .body("id", equalTo(5));
 
     }
 
