@@ -18,9 +18,11 @@ import java.util.Locale;
 
 public abstract class ApplicationSteps {
 
-    private final String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
-    private final String secondHostName = System.getProperty("baseSecond.url").toLowerCase(Locale.ROOT);
-    private final String explisityWait = System.getProperty("explisityWait").toLowerCase(Locale.ROOT);
+//    private final String hostname = System.getProperty("base.url").toLowerCase(Locale.ROOT);
+//    private final String secondHostName = System.getProperty("baseSecond.url").toLowerCase(Locale.ROOT);
+//    private final String explisityWait = System.getProperty("explisityWait").toLowerCase(Locale.ROOT);
+    private final String hostname = "https://otus.ru/";
+    private final String secondHostName = "https://bspb.ru";
 
 
     protected WebDriver driver;

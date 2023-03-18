@@ -1,5 +1,6 @@
 package ui.bspb;
 
+import io.qameta.allure.Description;
 import ui.components.AssertionsSteps;
 import ui.data.DriverData;
 import ui.factory.WebDriverFactory;
@@ -23,7 +24,7 @@ public class BspbCheckActualDateOffersYarko_Test  {
     }
 
     @Test
-    @DisplayName("Проверка: дата начала офферов ярко больше текущей")
+    @Description("Проверка: дата начала офферов ярко больше текущей")
     public void checkYarkoOffersDate() throws InterruptedException {
         driver.manage().window().maximize();
         BspbMainMenu bspbMainMenu = new BspbMainMenu(driver);
