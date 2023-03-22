@@ -1,4 +1,4 @@
-package reqres.in;
+package reqres.in.GetListUsers;
 
 import lombok.Builder;
 import lombok.Data;

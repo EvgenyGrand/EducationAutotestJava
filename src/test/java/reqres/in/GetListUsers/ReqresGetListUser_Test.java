@@ -1,22 +1,27 @@
-package reqres.in;
+package reqres.in.GetListUsers;
 
+import io.qameta.allure.Description;
 import io.restassured.http.ContentType;
+import lombok.Builder;
+import lombok.Data;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import reqres.in.Specifications;
 
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.responseSpecification;
 
-
-public class ReqresGetListUser {
+@Data
+@Builder
+public class ReqresGetListUser_Test extends Specifications {
 
     public final static String URL = "https://reqres.in/";
     public final static String spec = "api/users?page=5";
 
     @Test
+    @Description("ѕолучение списка пользователлей и проверка на сожержание почты корректного домена")
     public void CheckAvatarAndEmail() {
      Specifications.installSpecification(Specifications.requestSpec(URL),Specifications.responseSpecstatus200());
         List<UserDataGetListUser> users = given()
