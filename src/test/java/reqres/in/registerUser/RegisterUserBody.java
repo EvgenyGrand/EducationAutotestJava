@@ -1,12 +1,17 @@
 package reqres.in.registerUser;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class RegisterUserBody {
         private String email;
         private String password;
+
+
     }
+
 

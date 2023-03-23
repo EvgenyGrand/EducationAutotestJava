@@ -1,10 +1,13 @@
 package reqres.in.registerUser;
 
 
-import lombok.Builder;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class SuccessRegisterResponse {
     public Integer id;

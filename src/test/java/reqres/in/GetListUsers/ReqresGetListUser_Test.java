@@ -2,6 +2,7 @@ package reqres.in.GetListUsers;
 
 import io.qameta.allure.Description;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import lombok.Builder;
 import lombok.Data;
 import org.assertj.core.api.Assertions;
@@ -29,6 +30,7 @@ public class ReqresGetListUser_Test extends Specifications {
                 .contentType(ContentType.JSON)
                 .get(spec)
                 .then().log().all()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemaAPi/reqres.in/GetListUser.json"))
                 .extract().body().jsonPath().getList("data",UserDataGetListUser.class);
         users.forEach(x-> Assertions.assertThat(x.getAvatar().contains(x.getId().toString())));
         Assertions.assertThat(users.stream().allMatch(s -> s.getEmail().endsWith("@reqres.in")));

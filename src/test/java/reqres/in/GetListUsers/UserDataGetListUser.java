@@ -1,9 +1,11 @@
 package reqres.in.GetListUsers;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class UserDataGetListUser {
         public Integer id;

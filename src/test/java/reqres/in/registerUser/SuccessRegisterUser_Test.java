@@ -1,4 +1,5 @@
 package reqres.in.registerUser;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import lombok.Builder;
 import lombok.Data;
 import org.assertj.core.api.Assertions;
@@ -14,7 +15,7 @@ public class SuccessRegisterUser_Test extends Specifications {
     public final static String spec = "api/users?page=5";
 
     @Test
-    public void sucseefulRegisterUser() {
+    public void succesfulRegisterUser() {
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpecstatus200());
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
@@ -26,6 +27,7 @@ public class SuccessRegisterUser_Test extends Specifications {
                 .post("api/register")
                 .then()
                 .log().all()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemaAPi/reqres.in/SucessfulRegisterUser.json"))
                 .extract().as(SuccessRegisterResponse.class);
         Assertions.assertThat(id).isEqualTo(successRegisterResponse.getId());
         Assertions.assertThat(token).isEqualToIgnoringCase(successRegisterResponse.getToken());
