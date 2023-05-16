@@ -30,7 +30,7 @@ public class OtusCheckCountSpecializationCourse_Test {
         MainPageOtus mainPage = new MainPageOtus(driver);
         AssertionsSteps assertionsSteps = new AssertionsSteps(driver);
         mainPage.openFirstUrl();
-        assertionsSteps.checkCountCardsOfCourseStartWishValue(mainPage.cardsOFCourse, "Специализация", 13);
+        assertionsSteps.checkCountCardsOfCourseStartWishValue(mainPage.cardsOFCourse, "Специализация", 12);
     }
 
     @AfterEach

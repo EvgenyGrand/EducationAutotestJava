@@ -28,7 +28,7 @@ public abstract class ApplicationSteps {
     protected WebDriver driver;
     protected int time = 10;
     protected Actions actions;
-    protected Select select;
+
 
     DateTimeFormatter formats = DateTimeFormatter.ofPattern("d MMMM yyyy");
 

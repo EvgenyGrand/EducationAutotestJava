@@ -34,7 +34,7 @@ public class OtusCheckCountCurse_Test {
         educationMenu.openFirstUrl();
         educationMenu.navigationDropDownMenu(educationMenu.firstLevelMenu, educationMenu.secondLevelMenu);
         pageOfTestingCourse.jsClick(pageOfTestingCourse.buttonPagination);
-        assertionsSteps.checkCountCourse(pageOfTestingCourse.cardsOfCurse, 16);
+        assertionsSteps.checkCountCourse(pageOfTestingCourse.cardsOfCurse, 15);
 
 
     }

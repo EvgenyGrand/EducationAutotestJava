@@ -236,7 +236,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure-maven.version}</version>
                 <configuration>
-                    <resultsDirectory>C:\Users\echis\IdeaProjects\EducationAutotestJava\target\allure-results</resultsDirectory>
+                    <resultsDirectory>C:\Users\User\IdeaProjects\EducationAutotestJava\target\allure-results</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>
