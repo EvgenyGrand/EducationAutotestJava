@@ -12,7 +12,7 @@ public class BspbMainMenu extends AbsBasePages {
         super(driver);
     }
 
-    @FindBy(css = "button[id='popover-trigger-:Rqkrlj6bqmH1:']")
+    @FindBy(xpath = "//div[@class ='css-70qvj9']//button[1]")
     public WebElement debitCards;
 
     @FindBy(xpath = "//*[contains(text(),'Партнеры и акции')]")
