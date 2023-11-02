@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -51,7 +52,7 @@ public abstract class ApplicationSteps {
 
 
     public void explicitWait(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, time);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 

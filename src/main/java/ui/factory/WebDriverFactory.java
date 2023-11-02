@@ -26,6 +26,8 @@ public class WebDriverFactory {
 
                 WebDriverManager.chromedriver().setup();
                 return new ChromeDriver();
+            case FIREFOX:
+                WebDriverManager.firefoxdriver().setup();
 
             default:
                 throw new BrowserNotSupportException(driverData);
